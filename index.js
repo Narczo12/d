@@ -67,19 +67,11 @@ client.on("guildMemberAdd", (member) => {
       .setAuthor(`Witaj ${member.user.username}`)
       .setDescription(`Witamy Cię na serwerze \`HypeCash\`, to oficjalny serwer!`)
       .setFooter(`HypeCash.EU © 2021-2022 All Rights Reserved.`, member.user.displayAvatarURL())
+      .setImage('https://cdn.discordapp.com/attachments/916360252109226125/916630631801303081/HypeCashZimaBaner.png')
       .setTimestamp()
       client.channels.cache.get(config.welcome_channel).send(embed)
 });
 
-client.on("guildMemberRemove", (member) => {
-  const embed = new Discord.MessageEmbed()
-      .setColor('#00d0ff')
-      .setAuthor(`Żegnaj ${member.user.username}`)
-      .setDescription(`Żegnamy Cię na serwerze \`HypeCash\`, to oficjalny serwer!`)
-      .setFooter(`HypeCash.EU © 2021-2022 All Rights Reserved.`, member.user.displayAvatarURL())
-      .setTimestamp()
-      client.channels.cache.get(config.welcome_channel).send(embed)
-});
 
 
 //propozycje
